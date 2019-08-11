@@ -6,16 +6,15 @@ import classes from './Toolbar.css';
 
 class toolbar extends Component {
   state = {
-
   }
 
   render() {
     return (
       <header className={ classes.Toolbar }>
-        <div className = {classes.Logo}>
+        <div className={ classes.Logo }>
           <Logo />
         </div>
-        <nav>
+        <nav className={ classes.DesktopOnly }>
           <NavigationItems />
         </nav>
         <div>Profile</div>
