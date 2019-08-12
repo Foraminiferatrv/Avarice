@@ -4,17 +4,24 @@ import Toolbar from '../Navigation/Toolbar/Toolbar';
 import Sidedrawer from '../Navigation/Sidedrawer/Sidedrawer';
 
 class Layout extends Component {
-  state={
+  state = {
     showSidedrawer: false
+  }
+
+  burgerMenuHanlder = () => {
+    this.setState( ( prevState ) => {
+      return { showSidedrawer: !prevState.showSidedrawer };
+     
+    } );
+    console.log( this.state.showSidedrawer );
   }
 
   render() {
     return (
       <Fragment>
         <div>
-          menu
-          <Sidedrawer show={this.state.showSidedrawer} />
-          <Toolbar />
+          <Sidedrawer show={ this.state.showSidedrawer } burgerMenuHanlder={ this.burgerMenuHanlder}/>
+          <Toolbar burgerMenuHanlder={this.burgerMenuHanlder} />
         </div>
         <main>
           { this.props.children }

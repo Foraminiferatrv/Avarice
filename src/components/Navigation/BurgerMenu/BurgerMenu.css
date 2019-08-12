@@ -1,0 +1,22 @@
+.BurgerMenu{
+  display: none;
+}
+
+@media(max-width:500px){
+.BurgerMenu {
+  height: 65px;
+  width: 37px;
+  display: flex;
+  padding: 13px 0;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.BurgerMenu div {
+  background-color: #DA9716;
+  height: 11%;
+  margin: 3px;
+  width: 100%;
+}
+}

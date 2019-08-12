@@ -1,11 +1,15 @@
 .Logo{
-  background-color: #567025;
   padding: 9px;
   height: 100%;
   box-sizing: border-box;
 }
 
 .Logo img{
-  
   height: 100%;
+}
+
+@media(max-width:500px){
+  .Logo img {
+    display: none;
+  }
 }

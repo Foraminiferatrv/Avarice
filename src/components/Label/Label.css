@@ -1,0 +1,12 @@
+.Label{
+  color: #DA9716;
+  font-weight: bold;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  font-size: 15pt;
+  margin-left: 10px;
+}
+
+.Label:hover{
+  color: rgb(247, 237, 218);
+}
