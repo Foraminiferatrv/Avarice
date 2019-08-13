@@ -5,10 +5,14 @@ import NavigationItems from '../NavigationItems/NavigationItems';
 import Logo from '../../Logo/Logo';
 import classes from './Toolbar.css';
 import Label from '../../Label/Label';
+import UserIcon from '../UserIcon/UserIcon';
+import ProfileStatus from '../ProfileStatus/ProfileStatus';
 
 class Toolbar extends Component {
   state = {
-
+    loginStatus: true,
+    userName: 'Foraminifera',
+    iconUrl: '/'
   }
 
 
@@ -23,7 +27,13 @@ class Toolbar extends Component {
         <nav className={ classes.DesktopOnly }>
           <NavigationItems />
         </nav>
-        <div>Profile</div>
+        <div className={ classes.Profile }>
+          <UserIcon />
+          <ProfileStatus
+            loginStatus={ this.state.loginStatus }
+            userName={this.state.userName}
+          />
+        </div>
       </header>
     );
   }

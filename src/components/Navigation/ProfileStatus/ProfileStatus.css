@@ -1,0 +1,26 @@
+.ProfileStatus {
+  box-sizing: border-box;
+  display: flex;
+}
+
+.ProfileStatus a {
+  text-decoration: none;
+  color: #F5E856;
+  font-weight: bold;
+  margin: 0 5px;
+  font-size: 10pt;
+  text-decoration: 0.4s;
+}
+
+.ProfileStatus a:hover {
+  color: rgb(245, 243, 220);
+}
+
+.Hide {
+  display: none;
+}
+@media(max-width:600px){
+  .ProfileStatus a {
+    display: none;
+  }
+}
