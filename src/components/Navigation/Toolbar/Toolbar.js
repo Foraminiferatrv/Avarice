@@ -12,7 +12,8 @@ class Toolbar extends Component {
   state = {
     loginStatus: true,
     userName: 'Foraminifera',
-    iconUrl: '/'
+    iconUrl: '/',
+    userTotalMoney: 8334
   }
 
 

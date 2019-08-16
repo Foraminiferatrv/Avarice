@@ -1,13 +1,14 @@
 import React from 'react';
 
-import userIconImg from '../../../assets/img/Profile/userIcon.png';
 import classes from './UserIcon.css';
+
+const userImg = '/img/Profile/userIcon.png';
 
 const userIcon = ( props ) => (
   <div className={classes.UserIcon}>
 
     <a href="/" >
-      <img src={ userIconImg } alt="user"  />
+      <img src={ window.location.origin + userImg } alt="user"  />
     </a>
   </div>
 )
