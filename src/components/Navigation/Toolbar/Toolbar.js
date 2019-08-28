@@ -6,6 +6,7 @@ import Logo from '../../Logo/Logo';
 import classes from './Toolbar.css';
 import Label from '../../Label/Label';
 import UserIcon from '../UserIcon/UserIcon';
+import TotalMoneyCounter from '../../TotalMoneyCounter/TotalMoneyCounter';
 import ProfileStatus from '../ProfileStatus/ProfileStatus';
 
 class Toolbar extends Component {
@@ -13,7 +14,8 @@ class Toolbar extends Component {
     loginStatus: true,
     userName: 'Foraminifera',
     iconUrl: '/',
-    userTotalMoney: 8334
+    userTotalMoney: 8334,
+    chosenCurrency: 'usd'
   }
 
 
@@ -29,6 +31,7 @@ class Toolbar extends Component {
           <NavigationItems />
         </nav>
         <div className={ classes.Profile }>
+          <TotalMoneyCounter chosenCurrency={this.state.chosenCurrency} totalMoney={this.state.userTotalMoney}/>
           <UserIcon />
           <ProfileStatus
             loginStatus={ this.state.loginStatus }
