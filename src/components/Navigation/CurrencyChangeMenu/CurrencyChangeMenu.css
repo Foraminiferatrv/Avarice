@@ -1,0 +1,9 @@
+/* .CurrencyChangeMenu {
+  display: flex;
+  flex-direction: column;
+  padding-top: 200px;
+} */
+
+.CurrencyChangeMenu button {
+  display: block;
+}

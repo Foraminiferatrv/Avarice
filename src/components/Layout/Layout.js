@@ -11,7 +11,6 @@ class Layout extends Component {
   burgerMenuHanlder = () => {
     this.setState( ( prevState ) => {
       return { showSidedrawer: !prevState.showSidedrawer };
-     
     } );
     console.log( this.state.showSidedrawer );
   }

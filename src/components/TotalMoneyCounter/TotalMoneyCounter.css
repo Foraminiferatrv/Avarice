@@ -1,0 +1,15 @@
+.TotalMoneyCounter{
+  color: #DA9716;
+  display: flex;
+  font-weight: bold;
+  margin-right: 10px ;
+  align-items: center;
+  font-size: 11pt;
+  cursor: pointer;
+}
+
+.Currency{
+  color: rgb(240, 200, 126);
+  margin-right: 5px;
+  font-size: 10pt;
+}
