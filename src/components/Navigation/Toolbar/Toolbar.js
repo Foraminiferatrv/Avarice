@@ -20,8 +20,13 @@ class Toolbar extends Component {
     loginStatus: true,
     currencyMenuOpened: false,
     iconUrl: '/',
+<<<<<<< HEAD
     currentCurrency: 'USD',
     currencySign: '$'
+=======
+    userTotalMoney: 8334,
+    chosenCurrency: 'usd'
+>>>>>>> e46a4f4f6e2e8b0cab5e4acc94d8cf33a844a3ab
   }
 
   dropDownMenuOpenHandler = ( event ) => {
@@ -53,6 +58,7 @@ class Toolbar extends Component {
           <NavigationItems />
         </nav>
         <div className={ classes.Profile }>
+<<<<<<< HEAD
           <div className={classes.TotalMoneyCounter}>
             <TotalMoneyCounter
               openCurrencies={this.dropDownMenuOpenHandler}
@@ -61,6 +67,9 @@ class Toolbar extends Component {
               currentCurrency={ this.state.currentCurrency } />
             { currencyMenu }
           </div>
+=======
+          <TotalMoneyCounter chosenCurrency={this.state.chosenCurrency} totalMoney={this.state.userTotalMoney}/>
+>>>>>>> e46a4f4f6e2e8b0cab5e4acc94d8cf33a844a3ab
           <UserIcon />
           <ProfileStatus
             loginStatus={ this.state.loginStatus }
