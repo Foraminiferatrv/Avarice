@@ -1,9 +1,21 @@
-/* .CurrencyChangeMenu {
-  display: flex;
+.CurrencyChangeMenu {
+  position: absolute;
   flex-direction: column;
-  padding-top: 200px;
-} */
+  margin-top: 41px;
+  margin-left: -10px;
+}
 
 .CurrencyChangeMenu button {
   display: block;
+  border: none;
+  padding: 8px;
+  background-color: #F0E856;
+  color: #567025;
+  width: 50px;
+  font-weight: bold;
+  transition-duration: 0.2s;
+}
+
+.CurrencyChangeMenu button:hover {
+  background-color: #DA9716;
 }

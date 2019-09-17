@@ -1,0 +1,6 @@
+const CHANGE_CURRENCY = 'CHANGE_CURRENCY';
+
+export {
+  CHANGE_CURRENCY
+}
+

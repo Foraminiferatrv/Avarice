@@ -13,32 +13,34 @@ import ProfileStatus from '../ProfileStatus/ProfileStatus';
 
 class Toolbar extends Component {
   state = {
-    userInfo: {
-      userName: 'Foraminifera',
-      userTotalMoney: 8334,
-    },
-    loginStatus: true,
     currencyMenuOpened: false,
-    iconUrl: '/',
-    currentCurrency: 'USD',
-    currencySign: '$'
+    iconUrl: '/'
   }
 
   dropDownMenuOpenHandler = ( event ) => {
-    this.setState({currencyMenuOpened: true});
-    document.addEventListener('click', this.dropDownMenuCloseHandler)
+    this.setState( { currencyMenuOpened: true } );
+    document.addEventListener( 'click', this.dropDownMenuCloseHandler )
   }
-  
+
   dropDownMenuCloseHandler = ( event ) => {
-    this.setState({currencyMenuOpened: false});
-    document.removeEventListener('click', this.dropDownMenuCloseHandler)
+    this.setState( { currencyMenuOpened: false } );
+    document.removeEventListener( 'click', this.dropDownMenuCloseHandler )
+  }
+
+  changeCurrencyHandler = ( currency, multiplier ) => {
+    this.props.onChangeCurrency( currency, multiplier )
   }
 
   render() {
 
     const currencyMenu =
       this.state.currencyMenuOpened
-        ? ( <CurrencyChangeMenu /> )
+        ? ( <CurrencyChangeMenu
+          toUsd={ this.props.toUsd }
+          toEur={ this.props.toEur }
+          toRub={ this.props.toRub }
+          toUah={ this.props.toUah }
+        /> )
         : null;
 
 
@@ -53,18 +55,20 @@ class Toolbar extends Component {
           <NavigationItems />
         </nav>
         <div className={ classes.Profile }>
-          <div className={classes.TotalMoneyCounter}>
+          <div className={ classes.TotalMoneyCounter }>
             <TotalMoneyCounter
-              openCurrencies={this.dropDownMenuOpenHandler}
-              currencySign={this.state.currencySign}
-              userTotalMoney={ this.state.userInfo.userTotalMoney }
-              currentCurrency={ this.state.currentCurrency } />
+              openCurrencies={ this.dropDownMenuOpenHandler }
+              currencySign={ this.props.currencySign }
+              userTotalMoney={ this.props.userTotalMoney }
+              currentCurrency={ this.props.currentCurrency }
+              multiplier={ this.props.currencyMultiplier }
+            />
             { currencyMenu }
           </div>
           <UserIcon />
           <ProfileStatus
-            loginStatus={ this.state.loginStatus }
-            userName={ this.state.userInfo.userName }
+            loginStatus={ this.props.loginStatus }
+            userName={ this.props.userName }
           />
         </div>
       </header>
